@@ -96,9 +96,9 @@ tan_btn = Button(btns_frame, text = 'tan', fg = 'black', width=10, height=3, bd=
 
 #seventh row
 
-opening = Button(btns_frame, text = '(', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click('(')).grid(row = 6, column = 0, padx = 1, pady = 1, columnspan=1)
+opening = Button(btns_frame, text = '(', fg = 'black', width=10, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click('(')).grid(row = 6, column = 0, padx = 1, pady = 1, columnspan=1)
 
-closing = Button(btns_frame, text = ')', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click(')')).grid(row = 6, column = 1, padx = 1, pady = 1, columnspan=1)
+closing = Button(btns_frame, text = ')', fg = 'black', width=10, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click(')')).grid(row = 6, column = 1, padx = 1, pady = 1, columnspan=1)
 
-backspace = Button(btns_frame, text = ')', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click('backspace')).grid(row = 6, column = 2, padx = 1, pady = 1, columnspan=2)
+backspace = Button(btns_frame, text = 'backspace', fg = 'black', width=10, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_back()).grid(row = 6, column = 2, padx = 1, pady = 1, columnspan=2)
 win.mainloop()
