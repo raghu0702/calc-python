@@ -28,6 +28,11 @@ def btn_clear():
     input_text.set('')
     expr = ''
 
+def btn_back():
+    global expr
+    expr = expr[:-1]
+    input_text.set(expr)
+
 input_frame = Frame(win, width=312, height=50, bd=0, highlightbackground='black', highlightcolor='black', highlightthickness=2)
 input_frame.pack(side=TOP)
 input_field = Entry(input_frame, font=('arial', 18, 'bold'), textvariable=input_text, width=50, bg="#eee", bd=0, justify=RIGHT)
@@ -91,8 +96,9 @@ tan_btn = Button(btns_frame, text = 'tan', fg = 'black', width=10, height=3, bd=
 
 #seventh row
 
-opening = Button(btns_frame, text = '(', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click('(')).grid(row = 6, column = 0, padx = 1, pady = 1, columnspan=2)
+opening = Button(btns_frame, text = '(', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click('(')).grid(row = 6, column = 0, padx = 1, pady = 1, columnspan=1)
 
-closing = Button(btns_frame, text = ')', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click(')')).grid(row = 6, column = 2, padx = 1, pady = 1, columnspan=2)
+closing = Button(btns_frame, text = ')', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click(')')).grid(row = 6, column = 1, padx = 1, pady = 1, columnspan=1)
 
+backspace = Button(btns_frame, text = ')', fg = 'black', width=21, height=3, bd=0, bg='#fff', cursor='hand2', command= lambda: btn_click('backspace')).grid(row = 6, column = 2, padx = 1, pady = 1, columnspan=2)
 win.mainloop()
